@@ -10,4 +10,13 @@ Synchronize LFD blocks to Cloudflare
 4. edit include.sh using comments for help
 5. Edit csf.conf, set `BLOCK_REPORT` to the absolute path of block.sh and `UNBLOCK_REPORT` to the absolute path of unblock.sh
 
+## secret.sh
 
+The `secret.sh` file contains your cloudflare email and API key.
+
+```
+#!/bin/bash
+
+key="abcdefg1234"
+email="johndoe@example.com"
+```
