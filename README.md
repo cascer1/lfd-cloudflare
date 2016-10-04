@@ -6,9 +6,8 @@ Synchronize LFD blocks to Cloudflare
 
 1. Clone to any directory on your server
 2. `chmod +x *.sh`
-3. `chmod +x secret/*.sh`
-4. edit include.sh using comments for help
-5. Edit csf.conf, set `BLOCK_REPORT` to the absolute path of block.sh and `UNBLOCK_REPORT` to the absolute path of unblock.sh
+3. edit include.sh using comments for help
+4. Edit csf.conf, set `BLOCK_REPORT` to the absolute path of block.sh and `UNBLOCK_REPORT` to the absolute path of unblock.sh
 
 ## secret.sh
 
