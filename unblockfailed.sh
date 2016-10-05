@@ -6,8 +6,11 @@
 # 	      - Looks for the cloudflare rule ID in a file named 'failedUnblocks'
 # 	      - Saves the IP and cloudflare rule ID to a file named 'blocked' in the format ip|id
 
+# Directory of THIS script, used for includes.
+dir="/etc/csf/scripts/cloudflare"
+
 # Include file, contains api key and other settings
-source include.sh
+source "$dir/include.sh"
 
 ip=$(printf "%q" $1)
 
