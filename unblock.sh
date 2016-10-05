@@ -5,8 +5,11 @@
 # 	      - logs errors to $unblocklog
 # 	      - logs failed IP's and rule ID's in $failed
 
+# Directory of THIS script, used for includes.
+dir="/etc/csf/scripts/cloudflare"
+
 # Include file, contains api key and other settings
-source include.sh
+source "$dir/include.sh"
 
 ip=$(printf "%q" $1)
 

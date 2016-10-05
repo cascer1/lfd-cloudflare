@@ -1,12 +1,14 @@
 #!/bin/bash
 
 # INCLUDE file for LFD cloudflare script
-source secret.sh
 
 # Script directory
 # Can be either absolute (e.g: /etc/csf/scripts/cloudflare)
 # Or relative to CSF directory (e.g: scripts/cloudflare)
 dir="/etc/csf/scripts/cloudflare"
+
+# file containing api key and email
+source "$dir/secret.sh"
 
 # Date format
 # Used for rule description in Cloudflare
