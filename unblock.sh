@@ -21,11 +21,19 @@ idsize=${#id}
 sed --in-place "/^$ip.*$/d" "$blocked"
 
 if [ $idsize == 32 ]; then
+
+
+	# Build request, for debugging purposes
+	url="https://api.cloudflare.com/client/v4/user/firewall/access_rules/rules/$id"
+	emh="X-Auth-Email: $email"
+	keh="X-Auth-Key: $key"
+	coh="Content-Type: application/json"
+
 	# Send delete request to cloudflare
-	response=$(curl --silent --request DELETE "https://api.cloudflare.com/client/v4/user/firewall/access_rules/rules/$id" \
-		-H "X-Auth-Email: $email" \
-		-H "X-Auth-Key: $key" \
-		-H "Content-Type: application/json")
+	response=$(curl --silent --request DELETE "$url" \
+		-H "$emh" \
+		-H "$keh" \
+		-H "$coh")
 	
 	# See if request succeeded
 	success=$(echo "$response" | jq -r '.["success"]')
@@ -34,11 +42,17 @@ if [ $idsize == 32 ]; then
 	# If request failed, keep track of IP in separate log
 	# And log response
 	if [ "$success" != "true" ]; then
-		echo "$ip|$id" >> "$unblocklog"
-	
-		echo "========================" >> "$unblocklog"
+		echo "$ip|$id" >> "$failed"
+		
+		echo "====================" >> "$unblocklog"
+		echo "===== REQUEST =====" >> "$unblocklog"
 		echo "'$date' -- '$ip': '$id'" >> "$unblocklog"
+		echo "$url" >> "$unblocklog"
+		echo "$emh" >> "$unblocklog"
+		echo "$keh" >> "$unblocklog"
+		echo "$coh" >> "$unblocklog"
+		echo "$dat" >> "$unblocklog"
+		echo "===== RESPONSE =====" >> "$unblocklog"
 		echo "$response" >> "$unblocklog"
-		echo "" >> "$unblocklog"
 	fi
 fi
