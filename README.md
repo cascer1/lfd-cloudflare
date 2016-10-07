@@ -1,6 +1,6 @@
 # LFD to Cloudflare
 
-Synchronize LFD blocks to Cloudflare
+Synchronize LFD blocks to Cloudflare using CSF's `BLOCK_REPORT` and `UNBLOCK_REPORT` script triggers.
 
 ## Usage
 
