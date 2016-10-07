@@ -20,3 +20,8 @@ The `secret.sh` file contains your cloudflare email and API key.
 key="abcdefg1234"
 email="johndoe@example.com"
 ```
+
+## Thanks
+
+Thanks to Jeff @ Aetherweb for writing [this article](http://www.aetherweb.co.uk/automatically-adding-configserver-firewall-csf-firewall-blocks-to-cloudflare/), it helped me get started with this solution!
+
