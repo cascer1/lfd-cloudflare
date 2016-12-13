@@ -1,4 +1,4 @@
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/c58a87eed9684ac4a96825aca8bc4594)](https://www.codacy.com/app/cas-eliens/lfd-cloudflare?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=cascer1/lfd-cloudflare&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/c58a87eed9684ac4a96825aca8bc4594)](https://www.codacy.com/app/cas-eliens/lfd-cloudflare?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ducohosting/lfd-cloudflare&amp;utm_campaign=Badge_Grade)
 
 # LFD to Cloudflare
 
